@@ -7,7 +7,6 @@ httpVueLoader.httpRequest = function (url) {
     html = html.replace(/<panel>(([\s\S])*)<\/panel>/, (match, p1) => {
       return `<template>${p1}</template>`
     });
-    console.log(html);
     return html;
   }).catch((err) => {
     throw Error(err);
